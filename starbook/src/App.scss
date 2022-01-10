@@ -1,0 +1,39 @@
+@mixin stroke($color, $size) {
+  text-shadow:
+    -#{$size} -#{$size} 0 $color,
+     0        -#{$size} 0 $color,
+     #{$size} -#{$size} 0 $color,
+     #{$size}  0        0 $color,
+     #{$size}  #{$size} 0 $color,
+     0         #{$size} 0 $color,
+    -#{$size}  #{$size} 0 $color,
+    -#{$size}  0        0 $color;
+}
+
+.App {
+  text-align: center;
+}
+
+.AppBanner {
+  background-color: #0c0c0c;
+  min-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(1rem + 2vmin);
+  color: white;
+}
+
+.TextLogo {
+  @include stroke(#fcf700, 2px);
+  font-size: 2.75rem;
+  font-weight: bold;
+  margin: .75rem 1.25rem;
+  color: #000;
+  align-self: flex-start;
+}
+
+.App-link {
+  color: #61dafb;
+}
